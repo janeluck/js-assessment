@@ -21,11 +21,9 @@ exports.arraysAnswers = {
 
   remove : function(arr, item) {
     var arr1 = arr.slice();
-    arr1.forEach(function(el, index){
-      if ( el === item) {
-        arr1.splice(index, 1)
-      }
-    })
+    while( arr1.indexOf(item) > -1) {
+      arr1.splice(arr1.indexOf(item), 1);
+    }
     return arr1;
   },
 
@@ -78,4 +76,4 @@ exports.arraysAnswers = {
 
   }
 };
-console.log(arraysAnswers.sum([1,2]));
+console.log(arraysAnswers.remove([1,2,2,3,2,5], 2));
