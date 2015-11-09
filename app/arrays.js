@@ -73,15 +73,29 @@ exports.arraysAnswers = {
   },
 
   duplicates : function(arr) {
+    var result = [];
+    arr.sort().forEach(function(item, index){
+      if (item == arr[index+1] && result.indexOf(item) < 0) {
+        result.push(item);
+      }
+    });
+    return result;
 
   },
 
   square : function(arr) {
-
+    return arr.map(function(item){
+      return item * item;
+    })
   },
 
   findAllOccurrences : function(arr, target) {
-
+    var result = [];
+    arr.forEach(function(item, index) {
+      if ( item == target) {
+        result.push(index);
+      }
+    })
+    return result;
   }
 };
-console.log(arraysAnswers.remove([1,2,2,3,2,5], 2));
