@@ -59,7 +59,8 @@ describe('functions', function() {
 
   it('you should be able to use arguments', function () {
     var a = Math.random();
-    var b = Math.random();
+    var b = Math.random();5
+
     var c = Math.random();
     var d = Math.random();
 

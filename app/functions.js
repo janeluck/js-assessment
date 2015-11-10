@@ -17,7 +17,13 @@ exports.functionsAnswers = {
   },
 
   makeClosures : function(arr, fn) {
-
+    var result = [];
+    arr.forEach(function(item){
+      result.push(function(){
+        return fn(item);
+      })
+    });
+    return result;
   },
 
   partial : function(fn, str1, str2) {
